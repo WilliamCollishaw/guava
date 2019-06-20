@@ -98,6 +98,12 @@ public class HttpStatus {
 	public static final int RESET_CONTENT = 205;
 	/** The <a href="https://tools.ietf.org/html/rfc2616#section-10.2.7">{@code Partial Content} HTTP response status code. */
 	public static final int PARTIAL_CONTENT = 206;
+	/** The <a href="https://tools.ietf.org/html/rfc4918#section-11.1">{@code Multi-Status} HTTP response status code. */
+	public static final int MULTI_STATUS = 207;
+	/** The <a href="https://tools.ietf.org/html/rfc5842#section-7.1">{@code Already Reported} HTTP response status code. */
+	public static final int ALREADY_REPORTED = 208;
+	/** The <a href="https://tools.ietf.org/html/rfc3229#section-10.4.1">{@code IM Used} HTTP response status code. */
+	public static final int IM_USED = 226;
 
 	/*
 	 * 3xx: Redirection
