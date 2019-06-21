@@ -28,16 +28,16 @@ import java.lang.reflect.Field;
 public class HttpStatusTest extends TestCase {
 
 	public void testWithinValidStatusCodeRange() throws IllegalAccessException {
-		for (Field field : relevantFields(HttpStatus.class)) {
+		for (Field field : relevantFields()) {
 			int code = (int) field.get(null);
 			assertTrue(code >= 100 && code <= 599);
 		}
 	}
 
 	// Visible for other tests to use
-	private static ImmutableSet<Field> relevantFields(Class<?> cls) {
+	private static ImmutableSet<Field> relevantFields() {
 		ImmutableSet.Builder<Field> builder = ImmutableSet.builder();
-		for (Field field : cls.getDeclaredFields()) {
+		for (Field field : HttpStatus.class.getDeclaredFields()) {
 			/*
 			 * Coverage mode generates synthetic fields.  If we ever add private
 			 * fields, they will cause similar problems, and we may want to switch
