@@ -27,7 +27,7 @@ import java.lang.reflect.Field;
  */
 public class HttpStatusTest extends TestCase {
 
-	public void testAssertWithinValidStatusCodeRange() throws IllegalAccessException {
+	public void testWithinValidStatusCodeRange() throws IllegalAccessException {
 		for (Field field : relevantFields(HttpStatus.class)) {
 			int code = (int) field.get(null);
 			assertTrue(code >= 100 && code <= 599);
